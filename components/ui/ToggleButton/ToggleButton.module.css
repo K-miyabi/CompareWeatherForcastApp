@@ -1,0 +1,37 @@
+.toggle {
+  display: flex;
+  position: relative;
+  margin: 0 auto 2em;
+  margin-top:25px;
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #dddddd;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+.toggle:has(:checked) {
+  background-color: #4bd865;
+}
+
+.toggle::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+  background-color: #fff;
+  content: '';
+  transition: left .4s;
+}
+
+.toggle:has(:checked)::after {
+  left: 50%;
+}
+
+.toggle input {
+  display: none;
+}

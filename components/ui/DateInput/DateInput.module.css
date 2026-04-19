@@ -1,0 +1,6 @@
+.container{
+    pointer-events: fill;
+    color:rgb(255, 255, 255);
+    border-color: white;
+    opacity: 1;
+}
