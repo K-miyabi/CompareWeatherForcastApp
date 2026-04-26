@@ -8,7 +8,7 @@ const ToggleButton = () => {
   };
   return (
     <label className={styles.toggle}>
-      <input type="checkbox" defaultChecked onClick={handleClick} />
+      <input type="checkbox" checked={isRainLayer} onClick={handleClick} />
     </label>
   );
 };

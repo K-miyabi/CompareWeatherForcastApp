@@ -3,7 +3,6 @@ import { z } from "zod";
 export const fetchCache = "force-no-store";
 
 export async function GET(request: NextRequest) {
-  console.log("Received request for LIFF login");
   const { searchParams } = new URL(request.url);
   const idToken = z.string().parse(searchParams.get("IdToken"));
 
