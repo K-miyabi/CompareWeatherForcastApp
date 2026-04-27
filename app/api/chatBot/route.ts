@@ -24,7 +24,12 @@ export async function POST(req: NextRequest) {
     max_new_tokens: 100,
     temperature: 0.7,
   });
-  return NextResponse.json({ reply: result[0].generated_text, status: 200 });
+  type TextGenerationResult = {
+    generated_text: string;
+  };
+
+  const reply = (result as TextGenerationResult[])[0].generated_text;
+  return NextResponse.json({ reply, status: 200 });
 }
 
 export async function PUT() {
